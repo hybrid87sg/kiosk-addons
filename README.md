@@ -1,7 +1,5 @@
 # Kiosk Signage add-ons for Home Assistant
 
-> **Not ready yet.** The add-on is being published for the first time. Until this note is gone, the add-on will not appear in the store.
-
 This repository lets Home Assistant install the **Kiosk Signage Server** add-on
 with a few clicks. The server runs digital signage: the Kiosk Player app on your
 TVs and the Kiosk Admin app on your phone both talk to it.
