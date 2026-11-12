@@ -52,6 +52,15 @@ this way is a separate add-on from the store one, with its own settings and data
   People you invited sign in with Google using a code from google.com/device; they don't need a Home
   Assistant account. This needs the two optional **Web sign-in client** settings.
 
+### Playlists and sites
+
+Every site (this Home Assistant, and each relay) has two playlists made for it,
+**Landscape** and **Portrait**. A screen plays the one that fits how it is
+mounted, with nothing to assign. They are listed under **Locations**. For a
+screen that should show something different, add an **extra playlist** there and
+choose it in the screen's **Edit** form. A landscape screen can also be set to
+**upside down**; that needs Kiosk Player 0.5.0 or newer on the TV.
+
 ## Files, dates and Google Drive
 
 Each file can have a first and last day to show (Library → calendar button). Before the first day it
