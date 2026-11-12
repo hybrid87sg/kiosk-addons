@@ -1,0 +1,4 @@
+# Tells Home Assistant this is an add-on repository.
+name: Kiosk Signage add-ons
+url: https://github.com/hybrid87sg/kiosk-addons
+maintainer: hybrid87sg
