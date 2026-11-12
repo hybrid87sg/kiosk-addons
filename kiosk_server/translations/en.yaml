@@ -18,8 +18,8 @@ configuration:
     name: Google Drive folder ID
     description: The ID of the Signage folder, from its web address (drive.google.com/drive/folders/THIS-PART).
   service_account_file:
-    name: Service account key file
-    description: The name of the key file you copied into this add-on's config folder (in addon_configs, the folder ending in _kiosk_server).
+    name: Service account key file (optional)
+    description: Only if you copied the key file into this add-on's config folder (in addon_configs, the folder ending in _kiosk_server). The easier way is to leave this alone and add the key in Kiosk Signage, under Settings → Google key.
   cache_media:
     name: Keep a local copy of each file
     description: Each file is downloaded from Google Drive once, then sent to every TV from this machine. Uses disk space here.

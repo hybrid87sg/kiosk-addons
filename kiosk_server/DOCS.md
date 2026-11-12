@@ -20,15 +20,20 @@ You need the one-time Google setup, which gives you:
    click **Add**, then **Close**, and refresh the page.
 2. Find **Kiosk Signage Server** in the store, open it and click **Install**.
    Home Assistant downloads it ready-made; nothing is built on your device.
-3. Start the add-on once. It stops straight away and its log asks for settings;
-   this also creates its config folder.
-4. Copy your service account key into the add-on's config folder and name it
-   `service-account.json`. To reach the folder, install the **Samba share**
-   add-on, start it, and open the **addon_configs** share from your computer.
-   The folder's name ends in **`_kiosk_server`**.
-5. Open the add-on's **Configuration** tab, fill in the settings, click **Save**,
+3. Open the add-on's **Configuration** tab, fill in the settings, click **Save**,
    then **Start**. The **Log** tab should say `Kiosk server running on port 3000`.
-6. Switch on **Start on boot** and **Watchdog**.
+4. Switch on **Start on boot**, **Watchdog** and **Show in sidebar**.
+5. Add your Google key. Open **Kiosk Signage** in the sidebar, go to
+   **Settings → Google key**, and either **upload** the `.json` key file or
+   **paste** its text. The key stays on this Home Assistant.
+6. The same card shows the service account's email. In Google Drive, share your
+   signage folder with that email as **Editor** (**Content manager** on a shared
+   drive). Then press **Test connection** under **Google Drive folder**.
+
+**Another way to add the key:** copy the key file into the add-on's config
+folder (the **addon_configs** share, in the folder ending in `_kiosk_server`)
+and name it `service-account.json`. A key added on the Settings page is used
+instead of this file.
 
 **Updates:** when a new version is out, Home Assistant shows an **Update** button
 on this add-on's page. Your settings, key file and data are kept.

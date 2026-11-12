@@ -1,6 +1,6 @@
 # Tells Home Assistant how to run the Kiosk server as an add-on.
 name: Kiosk Signage Server
-version: "0.4.0"
+version: "0.4.1"
 slug: kiosk_server
 description: The server for the Kiosk Admin phone app and the Kiosk Player TV app.
 url: https://github.com/hybrid87sg/kiosk-player
@@ -24,7 +24,8 @@ ports:
   3000/tcp: 3000
 ports_description:
   3000/tcp: Kiosk server (the apps connect here)
-# The add-on's own config folder, where you put the Google service account key.
+# The add-on's own config folder. The Google key can be put here as a file; the
+# easier way is the Settings page of the web interface (upload or paste).
 map:
   - type: addon_config
     read_only: false
@@ -49,7 +50,7 @@ schema:
   superadmin_email: str?
   google_web_client_id: str?
   drive_folder_id: str?
-  service_account_file: str
+  service_account_file: str?
   cache_media: bool
   transcode_videos: bool
   transcode_4k_hevc: bool
