@@ -1,6 +1,6 @@
 # Tells Home Assistant how to run the Kiosk server as an add-on.
 name: Kiosk Signage Server
-version: "0.5.0"
+version: "0.5.1"
 slug: kiosk_server
 description: The server for the Kiosk Admin phone app and the Kiosk Player TV app.
 url: https://github.com/hybrid87sg/kiosk-player
