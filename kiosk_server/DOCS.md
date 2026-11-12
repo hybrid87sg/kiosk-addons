@@ -8,10 +8,10 @@ from Google Drive to the TVs.
 
 You need the one-time Google setup, which gives you:
 
-- **Spongebob account email**: your Google account.
-- **Google web client ID**: from Google Cloud Console, ending in `.apps.googleusercontent.com`.
 - **Google Drive folder ID**: the last part of the Signage folder's web address.
-- **The service account key file** (a `.json` file).
+- **The service account key file** (a `.json` file), and the folder shared with that service account.
+
+Signing in doesn't involve Google: people use a username and password you make here.
 
 ## Install
 
@@ -29,6 +29,9 @@ You need the one-time Google setup, which gives you:
 6. The same card shows the service account's email. In Google Drive, share your
    signage folder with that email as **Editor** (**Content manager** on a shared
    drive). Then press **Test connection** under **Google Drive folder**.
+7. Make your own username: **Users → Add someone**, with a password of at least
+   8 characters and the role **Spongebob**. You sign in with it on the phone app.
+   This sidebar page never asks for it: your Home Assistant login covers it.
 
 **Another way to add the key:** copy the key file into the add-on's config
 folder (the **addon_configs** share, in the folder ending in `_kiosk_server`)
@@ -49,16 +52,16 @@ this way is a separate add-on from the store one, with its own settings and data
 - **In Home Assistant:** open **Kiosk Signage** in the sidebar. It's for Home Assistant admins, who get
   full (Spongebob) access.
 - **In any browser:** go to `http://<address>:3000`, or click **Open web UI** on this add-on's page.
-  People you invited sign in with Google using a code from google.com/device; they don't need a Home
-  Assistant account. This needs the two optional **Web sign-in client** settings.
+  People you made a user for sign in with their username and password; they don't need a Home
+  Assistant account.
 
-### Playlists and sites
+### Playlists and locations
 
-Every site (this Home Assistant, and each relay) has two playlists made for it,
-**Landscape** and **Portrait**. A screen plays the one that fits how it is
-mounted, with nothing to assign. They are listed under **Locations**. For a
-screen that should show something different, add an **extra playlist** there and
-choose it in the screen's **Edit** form. A landscape screen can also be set to
+Every location has two playlists made for it, **Landscape** and **Portrait**.
+A screen plays the one that fits how it is mounted, with nothing to assign, so
+every screen has to be in a location. They are listed under **Locations**. For
+a screen that should show something different, add an **extra playlist** there
+and choose it in the screen's **Edit** form. A landscape screen can also be set to
 **upside down**; that needs Kiosk Player 0.5.0 or newer on the TV.
 
 ## Files, dates and Google Drive

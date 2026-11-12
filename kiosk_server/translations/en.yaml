@@ -4,16 +4,10 @@ configuration:
     description: "main: this Home Assistant is the control centre (the usual choice, and the only one if you have one site). relay: this Home Assistant is at another site; its TVs reach the main server through it."
   site_name:
     name: Site name
-    description: The name of this site, e.g. Head office or Orchard branch. Screens are grouped by site on the web page.
+    description: The name of this site, e.g. Head office or Orchard branch. It is shown on this site's relay page and on new TVs waiting to be added.
   main_server_url:
     name: Main server address (relay only)
     description: The main Kiosk server's Tailscale address, e.g. 100.101.102.103:3000. Leave empty in main mode.
-  superadmin_email:
-    name: Spongebob account email
-    description: Your Google account. It always has Spongebob access in Kiosk Admin. Not needed in relay mode (nor are the Google and Drive settings below).
-  google_web_client_id:
-    name: Google web client ID
-    description: The "Web application" OAuth client ID from Google Cloud Console (ends in .apps.googleusercontent.com).
   drive_folder_id:
     name: Google Drive folder ID
     description: The ID of the Signage folder, from its web address (drive.google.com/drive/folders/THIS-PART).
@@ -32,11 +26,5 @@ configuration:
   transcode_threads:
     name: Encoder threads
     description: How many processor cores one copy may use. Leave this at 1 on a Raspberry Pi so Home Assistant stays responsive.
-  google_device_client_id:
-    name: Web sign-in client ID (optional)
-    description: The "TVs and Limited Input devices" OAuth client ID. Lets people sign in to the web page at http://<address>:3000 with a code from google.com/device.
-  google_device_client_secret:
-    name: Web sign-in client secret (optional)
-    description: The secret of that same client.
 network:
   3000/tcp: Kiosk server port
