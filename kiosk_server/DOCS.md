@@ -98,6 +98,23 @@ that site's **Site name** and the main server's Tailscale address (e.g. `100.101
 needs no Google settings. Its TVs find it by themselves and show up on the main web interface, labelled
 with their site.
 
+From 0.7.0, pair each relay so the main server knows it's really that site: on the main server, open
+**Settings → Home Assistant Relays**, add the relay (or press **Pairing code** on it), and type the code
+into the relay add-on's **Pairing code** option. Save and restart the add-on. The code works once and
+for 10 minutes; the relay's status page then shows **Paired**. Relays that aren't paired keep working
+until you switch on **Only accept relays that have paired**.
+
+To see and control a site's screens in that site's own Home Assistant, add the **Kiosk Player**
+integration there (HACS custom repository `https://github.com/hybrid87sg/kiosk-player-ha`), with the
+same kind of code. Examples: <https://github.com/hybrid87sg/kiosk-player/blob/main/docs/ha-examples.md>.
+
+**If a site's Home Assistant is lost or reset:** on the main server, **Revoke…** that relay's
+credentials (its TVs keep playing), then **New pairing code** and put it in the relay add-on's
+**Pairing code** option and, if used, the integration's **Reconfigure** form.
+
+**Before updating,** back up the main Home Assistant (Settings → System → Backups). Update the main
+add-on first, then the relays.
+
 ## Managing screens away from home
 
 Your phone needs a way into your home network. The simplest is the **Tailscale**

@@ -8,6 +8,9 @@ configuration:
   main_server_url:
     name: Main server address (relay only)
     description: The main Kiosk server's Tailscale address, e.g. 100.101.102.103:3000. Leave empty in main mode.
+  pairing_code:
+    name: Pairing code (relay only)
+    description: "Make it on the main server: Settings → Home Assistant Relays. It works once and for 10 minutes; after pairing it can stay here or be removed. Leave empty in main mode."
   drive_folder_id:
     name: Google Drive folder ID
     description: The ID of the Signage folder, from its web address (drive.google.com/drive/folders/THIS-PART).
