@@ -115,6 +115,14 @@ credentials (its TVs keep playing), then **New pairing code** and put it in the 
 **Before updating,** back up the main Home Assistant (Settings → System → Backups). Update the main
 add-on first, then the relays.
 
+## Public dashboard (optional)
+
+To put the web page on the internet at its own https address (e.g. `https://kiosk.your-tailnet.ts.net`),
+with **Google sign-in only** there: switch on **Public dashboard**, give a **Tailscale auth key**
+(Tailscale admin console → Settings → Keys), restart the add-on, and follow **Settings → Public dashboard**
+in Kiosk Signage. Only the web page is reachable that way; never the screens, relays or files. Step by
+step: the "Public dashboard" section of the README, <https://github.com/hybrid87sg/kiosk-player>.
+
 ## Managing screens away from home
 
 Your phone needs a way into your home network. The simplest is the **Tailscale**

@@ -11,6 +11,15 @@ configuration:
   pairing_code:
     name: Pairing code (relay only)
     description: "Make it on the main server: Settings → Home Assistant Relays. It works once and for 10 minutes; after pairing it can stay here or be removed. Leave empty in main mode."
+  public_dashboard:
+    name: Public dashboard (main only)
+    description: "Puts the web dashboard on the internet at its own https address, with Google sign-in only, through Tailscale Funnel. Needs a Tailscale auth key below and Funnel allowed in your Tailscale settings. See Settings → Public dashboard in Kiosk Signage for the steps."
+  public_hostname:
+    name: Public dashboard name
+    description: "This add-on's machine name in Tailscale, e.g. kiosk → https://kiosk.your-tailnet.ts.net. Lower case letters, digits and -."
+  tailscale_auth_key:
+    name: Tailscale auth key (public dashboard)
+    description: "Make one in the Tailscale admin console → Settings → Keys (Generate auth key). Only needed the first time; after that it can stay or be removed."
   drive_folder_id:
     name: Google Drive folder ID
     description: The ID of the Signage folder, from its web address (drive.google.com/drive/folders/THIS-PART).
