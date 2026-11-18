@@ -42,7 +42,7 @@ instead of this file.
 on this add-on's page. Your settings, key file and data are kept.
 
 **Installing by hand instead:** copy the `kiosk_server` folder from a release's
-`kiosk_server-addon.zip` into the **addons** share, choose **Check for updates**
+`kiosk_server-addon-<version>.zip` into the **addons** share, choose **Check for updates**
 in the store's ⋮ menu, and install it from **Local add-ons**. Home Assistant
 then builds it on your device, which takes a few minutes. An add-on installed
 this way is a separate add-on from the store one, with its own settings and data.
