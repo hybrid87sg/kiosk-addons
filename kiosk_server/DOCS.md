@@ -55,6 +55,10 @@ this way is a separate add-on from the store one, with its own settings and data
   People you made a user for sign in with their username and password; they don't need a Home
   Assistant account.
 
+On each screen's card: **See screen** shows a picture of what the screen shows right now, and
+**Restart** restarts the app (or the whole PC / TV box where it can). Windows Kiosk Browser PCs update
+themselves overnight from this add-on, which fetches their installer once from GitHub (0.13.0).
+
 ### Playlists and locations
 
 Every location has two playlists made for it, **Landscape** and **Portrait**.
